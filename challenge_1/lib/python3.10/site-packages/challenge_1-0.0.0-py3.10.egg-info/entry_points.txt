@@ -1,0 +1,4 @@
+[console_scripts]
+process = challenge_1.process:main
+signal_generator = challenge_1.signal_generator:main
+

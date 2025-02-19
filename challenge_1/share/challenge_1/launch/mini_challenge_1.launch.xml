@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="challenge_1" exec="signal_generator" args="2.0 0.0 1.0 0.0"/>
+    <node pkg="challenge_1" exec="process"/>
+    <node pkg="rqt_plot" exec="rqt_plot" args='/signal/data /proc_signal/data'/>
+    <node pkg="rqt_graph" exec="rqt_graph"/>
+
+</launch> 
