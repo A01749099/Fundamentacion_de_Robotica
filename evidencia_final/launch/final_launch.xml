@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="evidencia_final" exec="set_point" output="screen" launch-prefix="xterm -e"/>
+    <node pkg="joy" exec="joy_node"/>
+    
+    <node pkg="rqt_graph" exec="rqt_graph"/>
+    <node pkg="rqt_plot" exec="rqt_plot" args="/motor_output_y_d/data /motor_output_y_d/data /motor_input_u_d/data /motor_input_u_i/data /set_point_d/data /set_point_i/data "/>
+    <node pkg="micro_ros_agent" exec="micro_ros_agent" args="udp4 --port 9999"/>
+
+</launch>
